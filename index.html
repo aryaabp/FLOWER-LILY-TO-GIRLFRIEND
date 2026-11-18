@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>bunga lily untukmu • maafin kakaa yaa adikk sayangg 🤍</title>
+  <meta name="description" content="animasi bunga lily mekar estetik untuk permintaan maaf.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- canvas for procedural blooming lily flower & stardust -->
+  <canvas id="flowerCanvas"></canvas>
+
+  <!-- ambient twinkling stars -->
+  <div class="stars-container" id="starsContainer"></div>
+
+  <!-- intro screen (interactive glowing gift box) -->
+  <div class="intro-overlay" id="introOverlay">
+    <div class="gift-box-wrapper" id="giftBoxBtn" role="button" aria-label="buka box">
+      <div class="box-visual">
+        <div class="box-glow"></div>
+        <div class="box-lid" id="boxLid">
+          <div class="box-bow">
+            <div class="bow-loop left"></div>
+            <div class="bow-knot"></div>
+            <div class="bow-loop right"></div>
+            <div class="bow-ribbon-tail left"></div>
+            <div class="bow-ribbon-tail right"></div>
+          </div>
+          <div class="lid-strap"></div>
+        </div>
+        <div class="box-base" id="boxBase">
+          <div class="base-strap-v"></div>
+          <div class="base-strap-h"></div>
+          <div class="box-heart-tag">🤍</div>
+        </div>
+        <div class="box-shadow-ground"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- top minimalist controls -->
+  <header class="top-bar">
+    <div class="brand">
+      <span class="brand-flower">✿</span>
+      <span class="brand-text">lily of forgiveness</span>
+    </div>
+    <div class="actions">
+      <button class="icon-btn" id="btnMusic" title="nyalakan / matikan musik" aria-label="musik">
+        <span id="musicIcon">🎵</span>
+      </button>
+      <button class="icon-btn" id="btnReplay" title="mekarkan ulang" aria-label="replay">
+        <span>↺</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- floating apology interaction (clean & floating directly under/over flower) -->
+  <main class="interaction-wrapper" id="interactionWrapper">
+    <div class="interaction-box" id="interactionBox">
+      <h2 class="prompt-text">maafin kakaa yaa adikk sayangg 🤍</h2>
+      
+      <div class="button-group" id="buttonGroup">
+        <button class="btn-forgive" id="btnForgive">
+          <span>iya, dimaafin</span>
+        </button>
+        <button class="btn-hesitant" id="btnHesitant">
+          <span>masih ngambek 🥺</span>
+        </button>
+      </div>
+
+      <!-- celebration message when forgiven -->
+      <div class="success-banner hidden" id="successBanner">
+        <h3 class="success-title">timakasiii sayanggkuu 🤍🌸</h3>
+        <p class="success-subtitle">maaf yaa bikin kesel kamuu teruss sayangg :(</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
